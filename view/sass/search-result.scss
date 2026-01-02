@@ -1,0 +1,241 @@
+body {
+  // code is in body-format.css
+  .content-wrapper {
+    // code is in body-format.css
+
+    .main {
+      height: 145vh;
+      grid-template-rows: 80px 1fr 250px;
+
+      #main-content {
+        height: 100%;
+        display: grid;
+        grid-template-rows: 8% 1fr 15%;
+        overflow-y: hidden;
+
+        .title-section {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 1em;
+
+          .title-wrapper {
+            height: 100%;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+
+            span {
+              font-size: 1.2em;
+              font-weight: 600;
+              color: #1a2368;
+              font-weight: bold;
+            }
+          }
+
+          .dropDown-filter {
+            height: 70%;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+            color: #1a2368;
+
+            label {
+              font-size: 1em;
+              font-weight: 600;
+            }
+
+            select {
+              height: 100%;
+              padding: 0 0.5em;
+              border: 1px solid #ccc;
+              border-radius: 6px;
+              font-size: 1em;
+              cursor: pointer;
+              transition: border-color 0.2s;
+              color: #1a2368;
+
+              &:hover {
+                border-color: #0056d2;
+              }
+            }
+          }
+        }
+
+        .result-wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: 550px;
+          gap: 1em;
+          overflow-y: auto;
+
+          &::-webkit-scrollbar {
+            display: none; /* Chrome, Edge, Safari */
+          }
+
+          .result-card {
+            display: flex;
+            gap: 0.5em;
+            padding: 0.5em;
+            color: var(--color-primary);
+
+            .result-number {
+              width: 60px;
+              display: flex;
+              align-items: start;
+
+              .number {
+                width: 100%;
+                aspect-ratio: 1/1;
+                padding: 0.5em;
+                background-color: var(--color-primary-light);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-size: 1.2em;
+                border-radius: 50%;
+              }
+            }
+
+            .content-wrapper {
+              background-color: #fff;
+              box-shadow: 0 0 4px rgba(15, 20, 70, 0.3);
+              display: grid;
+              grid-template-columns: 1fr;
+              grid-template-rows: auto auto 1fr auto;
+              padding: 1em;
+              gap: 0.5em;
+              transition: all 0.2s ease-in-out;
+              gap: 0.5em;
+              border-radius: 8px;
+
+              .title {
+                font-size: 1.25em;
+                font-weight: 700;
+                cursor: pointer;
+                transition: text-decoration 0.2s ease-in-out;
+
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+
+              .author {
+                font-size: 1.1;
+                font-weight: 600;
+              }
+
+              .abstract {
+                font-size: 1.05em;
+                text-indent: 2em;
+                text-align: justify;
+                color: #000;
+              }
+
+              .other-data {
+                font-size: .9em;
+                font-weight: 600;
+                display: flex;
+                gap: 0.5em;
+
+                .stars-wrapper {
+                  flex: 1;
+                  display: flex;
+                  justify-content: end;
+                  gap: 0.2em;
+
+                  .rating {
+                    font-size: 1em;
+                    font-weight: 700;
+                  }
+
+                  .stars {
+                    font-size: 1.3em;
+                    transition: color 0.3s ease;
+
+                    &.full {
+                      color: gold;
+                    }
+
+                    &.half {
+                      color: #ffd966;
+                    }
+
+                    &.empty {
+                      color: var(--color-primary);
+                    }
+                  }
+                }
+              }
+
+              &:hover {
+                transform: scale(1.01);
+              }
+            }
+          }
+        }
+
+        .pagination-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .buttons-wrapper {
+            height: 50px;
+            aspect-ratio: 1/1;
+            display: flex;
+            justify-content: center;
+            gap: 0.5em;
+
+            button {
+              aspect-ratio: 1/1;
+              padding: 0.4em 0.8em;
+              border: 1px solid #ccc;
+              background: #fff;
+              cursor: pointer;
+              border-radius: 6px;
+              transition: background 0.2s, color 0.2s, border-color 0.2s;
+
+              &:hover {
+                background: #0056d2;
+                color: #fff;
+              }
+
+              &.active {
+                background: #0056d2;
+                color: #fff;
+                border-color: #0056d2;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /* For Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(15, 20, 70, 0.3); /* subtle dark background */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(70, 90, 220, 0.8); /* your blue tone */
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(120, 140, 255, 0.9); /* brighter blue on hover */
+    }
+  }
+}
