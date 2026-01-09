@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . '/../../config/connection.php';
 header('Content-Type: application/json');
 
@@ -23,14 +22,21 @@ if ($column && in_array($column, $allowed_columns)) {
     $orderBy = "$column $sort";
 }
 
-
-
 // Define the query
 $query = "
-SELECT school_id, first_name, last_name, school_email, program_name, role 
-FROM account_table ac
-JOIN programs p ON ac.program_id = p.program_id
-WHERE role = :role
+SELECT
+    ac.school_id,
+    COALESCE(s.first_name, f.first_name) AS first_name,
+    COALESCE(s.last_name,  f.last_name)  AS last_name,
+    ac.school_email,
+    p.program_name,
+    f.position,
+    ac.role
+FROM accounts ac
+LEFT JOIN students s ON ac.account_id = s.account_id
+LEFT JOIN faculty  f ON ac.account_id = f.account_id
+LEFT JOIN programs p ON s.program_id = p.program_id
+WHERE ac.role = :role
 ORDER BY $orderBy
 ";
 

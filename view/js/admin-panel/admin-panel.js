@@ -1,14 +1,13 @@
 import { getUserInfo } from "../general/broadcast-user-info.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  (async function checkUserRole() {
-    const user = await getUserInfo();
-
-    // If user is null (guest) or not admin, redirect
-    if (!user || !user.school_id || user.role !== "admin") {
-      window.location.href = baseURL;
-    }
-  })();
+document.addEventListener("DOMContentLoaded", async () => {
+  /* ===================== AUTH GUARD ===================== */
+  // Will be deleted once routing authentication is implemented
+  const user = await getUserInfo();
+  if (!user || user.role !== "admin") {
+    window.location.href = baseURL;
+    return;
+  }
 
   initNavigation();
   initThesisArchive();
@@ -21,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const currentSection = sessionStorage.getItem("currentArchiveSection")
   ? sessionStorage.getItem("currentArchiveSection")
   : 0;
+  
 function initNavigation() {
   sessionStorage.setItem("currentAccountSection", currentSection);
 

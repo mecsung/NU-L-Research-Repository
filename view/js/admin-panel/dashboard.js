@@ -1,4 +1,5 @@
 function initDashboard() {
+  //========= Initial Data Section ==========
   async function fetchInitialData() {
     try {
       // Adjust the URL to your PHP script
@@ -62,6 +63,7 @@ function initDashboard() {
     }
   }
 
+  // ========== Thesis Insights Section ==========
   const thesisInsightsContainer = document.getElementById("thesis-insights");
 
   // Define the sections
@@ -111,7 +113,7 @@ function initDashboard() {
       function visitThesis(thesis_id, title) {
         const params = new URLSearchParams({ id: thesis_id });
         title.addEventListener("click", () => {
-          window.location.href = `${baseURL}view/pages/view-thesis.php?${params.toString()}`;
+          window.location.href = `${baseURL}view-thesis?${params.toString()}`;
         });
       }
 

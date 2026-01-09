@@ -20,7 +20,7 @@ try {
             }
 
             // Ensure account exists (prevents FK error)
-            $checkAccount = $conn->prepare("SELECT COUNT(*) FROM account_table WHERE school_id = ?");
+            $checkAccount = $conn->prepare("SELECT COUNT(*) FROM accounts WHERE school_id = ?");
             $checkAccount->execute([$school_id]);
             if ($checkAccount->fetchColumn() == 0) {
                 http_response_code(404);

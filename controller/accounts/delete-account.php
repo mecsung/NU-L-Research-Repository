@@ -11,9 +11,10 @@ if (!isset($input['school_id'])) {
 }
 
 $school_id = $input['school_id'];
+$role = $input['role'];
 
 try {
-    $stmt = $conn->prepare("DELETE FROM account_table WHERE school_id = :school_id");
+    $stmt = $conn->prepare("DELETE FROM accounts WHERE school_id = :school_id");
     $stmt->bindParam(':school_id', $school_id);
     $stmt->execute();
 

@@ -19,12 +19,17 @@
 <body>
 
   <div class="content-wrapper">
-    <div id="sidebar-spot"></div>
-
+    <div id="sidebar-spot">
+      <!-- Sidebar will be rendered here -->
+    </div>
+    <!-- Main Content -->
     <div class="main">
-      <div class="main-sections" id="header"></div>
+      <div class="main-sections" id="header">
+        <!-- Search Bar will render here -->
+      </div>
 
       <div class="main-sections" id="main-content">
+        <!-- Navigation Bar for Dashboard and Thesis List -->
         <nav class="nav-wrapper">
           <ul>
             <li class="nav-item">DASHBOARD</li>
@@ -115,23 +120,29 @@
           <div id="analytics-dashboard">
             <h2 id="section-label">Analytic Dashboard</h2>
             <div id="pub-trend-wrapper" class="canvas-wrapper">
-              <canvas id="publicationTrends"></canvas>
+              <canvas id="publicationTrends">
+                <!-- Number of publication per month will render here -->
+              </canvas>
             </div>
             <div id="method-wrapper" class="canvas-wrapper">
-              <canvas id="methodPieChart"></canvas>
+              <canvas id="methodPieChart">
+                <!-- Methodology distribution will render here -->
+              </canvas>
             </div>
             <div id="highest-program-wrapper" class="canvas-wrapper">
-              <canvas id="highestRatedPrograms"></canvas>
+              <canvas id="highestRatedPrograms">
+                <!-- Ranking of highest rated programs will render here -->
+              </canvas>
             </div>
           </div>
         </div>
         <!-- ==================== THESIS LIST SECTION ==================== -->
         <div id="thesis-list-section" class="archive-section">
+          <!-- Header Section: Title and Toolbox -->
           <div class="main-header">
             <span>LIST OF CURRENT AVAILABLE THESIS</span>
-
-            <!-- Dropdown -->
-            <div class="modifier-section">
+            <!-- Toolbox Section: Add, Refresh, Filter -->
+            <div class="toolbox-section">
               <button id="add-btn">ADD</button>
               <button id="refresh-btn">REFRESH</button>
               <label for="year-filter">Filter by Year:</label>
@@ -143,6 +154,7 @@
               </select>
             </div>
           </div>
+          <!-- List Header and Thesis List -->
           <div class="list-wrapper">
             <div class="list-header">
               <span class="header-info">TITLE</span>
@@ -153,13 +165,13 @@
               <span class="header-info">ACTION BTN</span>
             </div>
             <div class="thesis-list" id="thesis-list">
-              <!-- Results injected dynamically -->
+              <!-- Theses will render here -->
             </div>
           </div>
+          <!-- This is the pop-up form for adding/editing a thesis -->
           <!-- ==================== POP UP FORM ==================== -->
           <div id="pop-up">
             <form id="thesis-form" enctype="multipart/form-data">
-
               <!-- ==================== FORM HEADER ==================== -->
               <div id="form-header">
                 <span id="purpose-label">Purpose Placeholder</span>
@@ -313,16 +325,15 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
-  <script src="https://unpkg.com/typo-js@1.2.1/typo.js"></script>
-  <script src="<?php echo $BASE_URL; ?>view/js/admin-panel/thesis-archive.js?v=<?php echo time(); ?>"></script>
   <script src="<?php echo $BASE_URL; ?>view/js/admin-panel/dashboard.js?v=<?php echo time(); ?>"></script>
+  <script src="<?php echo $BASE_URL; ?>view/js/admin-panel/thesis-archive.js?v=<?php echo time(); ?>"></script>
   <script type="module"
     src="<?php echo $BASE_URL; ?>view/js/admin-panel/admin-panel.js?v=<?php echo time(); ?>"></script>
-  <script src="<?php echo $BASE_URL; ?>view/js/general/search-bar.js?v=<?php echo time(); ?>"></script>
   <script type="module" src="<?php echo $BASE_URL; ?>view/js/general/sidebar.js?v=<?php echo time(); ?>"></script>
-  <script src="<?php echo $BASE_URL; ?>view/js/general/broadcast-receiver.js?v=<?php echo time(); ?>"></script>
+  <script src="<?php echo $BASE_URL; ?>view/js/general/search-bar.js?v=<?php echo time(); ?>"></script>
   <script type="module"
     src="<?php echo $BASE_URL; ?>view/js/general/account-toggle.js?v=<?php echo time(); ?>"></script>
+  <script src="<?php echo $BASE_URL; ?>view/js/general/broadcast-receiver.js?v=<?php echo time(); ?>"></script>
 </body>
 
 </html>

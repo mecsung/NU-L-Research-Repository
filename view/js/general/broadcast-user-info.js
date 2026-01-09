@@ -14,7 +14,7 @@ export async function getUserInfo() {
     }
 
     // Fetch the role using school_id
-    const resRole = await fetch(
+    const res = await fetch(
       `${baseURL}controller/authentication/get-user-role.php`,
       {
         method: "POST",
@@ -23,9 +23,9 @@ export async function getUserInfo() {
       }
     );
 
-    const roleData = await resRole.json();
+    const data = await res.json();
 
-    if (!roleData.success) {
+    if (!data.success) {
       // If role fetch fails, treat as guest
       return null;
     }
@@ -34,8 +34,9 @@ export async function getUserInfo() {
     return {
       school_id,
       first_name,
-      role: roleData.role,
+      role: data.role,
     };
+
   } catch (err) {
     console.error("User info check failed:", err);
     // Treat errors as guest access

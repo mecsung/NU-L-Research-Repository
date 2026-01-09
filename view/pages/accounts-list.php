@@ -1,6 +1,3 @@
-<?php
-require_once __DIR__ . "/../../config/baseUrl.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +18,7 @@ require_once __DIR__ . "/../../config/baseUrl.php";
         <div id="sidebar-spot">
             <!--Side bar will render here-->
         </div>
-
+        <!-- Main Content -->
         <div class="main">
             <div class="main-sections" id="header">
                 <div id="search-wrapper">
@@ -63,7 +60,7 @@ require_once __DIR__ . "/../../config/baseUrl.php";
                     <div class="labels"><span>Options</span></div>
                 </div>
                 <div id="list-wrapper">
-                    <!--Accounts will be rendered here-->
+                    <!--Account list will be rendered here-->
                 </div>
             </div>
         </div>

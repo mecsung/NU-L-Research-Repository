@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const schoolId = document.getElementById("school-id").value.trim();
+    const school_id = document.getElementById("school-id").value.trim();
     const password = document.getElementById("password").value.trim();
 
-    if (!schoolId || !password) {
+    if (!school_id || !password) {
       alert("Please fill in both fields.");
       return;
     }
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ school_id: schoolId, password }),
+          body: JSON.stringify({ school_id, password }),
         }
       );
 

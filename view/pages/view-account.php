@@ -15,13 +15,14 @@
 <body>
     <div class="content-wrapper">
         <div id="sidebar-spot">
-
+            <!-- Sidebar will render here -->
         </div>
-
+        <!-- Account page content-->
         <div class="main">
+            <!-- Side Navigation for the account contents-->
             <div class="main-sections" id="side-nav">
                 <div id="section-label">
-                    <span>User Profile</span>
+                    <span>Account Profile</span>
                 </div>
                 <ul id="nav-wrapper">
                     <li class="nav-list">
@@ -58,9 +59,11 @@
             </div>
 
             <div class="main-sections" id="main-content">
+                <!-- Account Information Sections-->
                 <button type="button" id="back-btn"><span class="material-symbols-outlined icon">
                         close
                     </span></button>
+                <!-- Profile Information Section-->
                 <div class="info-section-items" id="user-profile">
                     <div id="user-profile-upper">
                         <div id="name-wrapper">
@@ -95,6 +98,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Favorite Thesis Section-->
                 <div class="info-section-items" id="favorite-list-section">
                     <div id="favorite-upper" class="favorite-section">
                         <span>Your Favorite Thesis List</span>
@@ -108,6 +112,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Viewing History Section-->
                 <div class="info-section-items" id="history-list-section">
                     <div id="history-upper" class="history-section">
                         <span>Your Theses Viewing History</span>

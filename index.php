@@ -1,4 +1,5 @@
 <?php
+// Require base URL configuration once for all the pages
 require_once __DIR__ . '/config/baseUrl.php';
 
 /*

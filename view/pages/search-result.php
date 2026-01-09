@@ -22,11 +22,13 @@ $searchTerm = isset($_GET['q']) ? htmlspecialchars($_GET['q']) : '';
 
 <body>
   <div class="content-wrapper">
-    <div id="sidebar-spot"></div>
+    <div id="sidebar-spot">
+      <!-- Sidebar will render here -->
+    </div>
 
     <div class="main">
       <div class="main-sections" id="header">
-
+        <!-- Search Bar will render here-->
       </div>
 
       <div class="main-sections" id="main-content">
@@ -36,7 +38,7 @@ $searchTerm = isset($_GET['q']) ? htmlspecialchars($_GET['q']) : '';
             <span>Results for "<?php echo $searchTerm; ?>"</span>
           </div>
 
-          <!-- Dropdown -->
+          <!-- Dropdown Filter -->
           <div class="dropDown-filter">
             <label for="year-filter">Filter by Year:</label>
             <select id="year-filter" name="year">
@@ -49,12 +51,12 @@ $searchTerm = isset($_GET['q']) ? htmlspecialchars($_GET['q']) : '';
         </div>
 
         <div class="result-wrapper" id="result-wrapper">
-          <!-- Results injected here -->
+          <!-- Results will render here -->
         </div>
 
         <div class="pagination-wrapper">
           <div class="buttons-wrapper" id="pagination-buttons">
-            <!-- Pagination buttons injected here -->
+            <!-- Pagination buttons will render here -->
           </div>
         </div>
 
@@ -68,7 +70,6 @@ $searchTerm = isset($_GET['q']) ? htmlspecialchars($_GET['q']) : '';
   <script type="module" src="<?php echo $BASE_URL; ?>view/js/general/sidebar.js"></script>
   <script src="<?php echo $BASE_URL; ?>view/js/general/broadcast-receiver.js?"></script>
   <script src="<?php echo $BASE_URL; ?>view/js/search-result.js"></script>
-  <script src="https://unpkg.com/typo-js@1.2.1/typo.js"></script>
   <script src="<?php echo $BASE_URL; ?>view/js/general/search-bar.js"></script>
   <script type="module" src="<?php echo $BASE_URL; ?>view/js/general/account-toggle.js"></script>
   <script src="<?php echo $BASE_URL; ?>view/js/general/footer.js"></script>

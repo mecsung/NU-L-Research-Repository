@@ -1,3 +1,5 @@
+// This is to broadcast the sidebar state to other components
+// Sidebar state could be "expanded" or "collapsed"
 document.addEventListener("DOMContentLoaded", () => {
   const content_wrapper = document.querySelector(".content-wrapper");
 

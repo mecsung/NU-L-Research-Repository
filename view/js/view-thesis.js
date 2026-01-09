@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       : `${baseURL}/view/assets/placeholder.jpeg`;
 
     setupReadButton(thesis);
-    setupFavorite(favoriteBtn, user, thesis_id);
+    if (user) setupFavorite(favoriteBtn, user, thesis_id);
 
     get("abstract-content").innerHTML = abstract
       ? sanitizeHTML(abstract)

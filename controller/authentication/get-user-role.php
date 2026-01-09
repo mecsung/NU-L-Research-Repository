@@ -13,7 +13,7 @@ if (!$school_id) {
     exit;
 }
 
-$stmt = $conn->prepare("SELECT role FROM account_table WHERE school_id = :school_id");
+$stmt = $conn->prepare("SELECT role FROM accounts WHERE school_id = :school_id LIMIT 1");
 $stmt->execute(['school_id' => $school_id]);
 $role = $stmt->fetchColumn();
 

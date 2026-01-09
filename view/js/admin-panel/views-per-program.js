@@ -1,14 +1,13 @@
 import { getUserInfo } from "../general/broadcast-user-info.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  (async function checkUserRole() {
-    const user = await getUserInfo();
-
-    // If user is null (guest) or not admin, redirect
-    if (!user || !user.school_id || user.role !== "admin") {
-      window.location.href = `${baseURL}`;
-    }
-  })();
+document.addEventListener("DOMContentLoaded", async () => {
+  /* ===================== AUTH GUARD ===================== */
+  // Will be deleted once routing authentication is implemented
+  const user = await getUserInfo();
+  if (!user || user.role !== "admin") {
+    window.location.href = baseURL;
+    return;
+  }
 
   const backBtn = document.getElementById("back-btn");
   const filterBtns = document.querySelectorAll(".date-filter");

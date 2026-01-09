@@ -6,7 +6,7 @@ try {
     // Users per role
     $users_query = "
         SELECT ac.role, COUNT(ac.school_id) AS total
-        FROM account_table ac
+        FROM accounts ac
         GROUP BY ac.role
     ";
     $users_result = $conn->query($users_query);

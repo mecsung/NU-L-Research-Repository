@@ -44,7 +44,7 @@
                     <option value="student">Student</option>
                     <option value="faculty">Faculty</option>
                 </select>
-                <select name="program" id="program-selection" class="selections">
+                <select name="program" id="subtype-selection" class="selections">
                     <option value="">-- Select Program --</option>
                 </select>
             </div>

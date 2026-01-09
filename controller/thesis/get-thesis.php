@@ -69,7 +69,7 @@ try {
             LEFT JOIN thesis_ratings tra 
                 ON t.thesis_id = tra.thesis_id 
             AND tra.school_id = :school_id
-            LEFT JOIN account_table at ON at.school_id = tra.school_id
+            LEFT JOIN accounts at ON at.school_id = tra.school_id
 
             WHERE t.thesis_id = :thesis_id
 

@@ -83,7 +83,7 @@
                 <div class="content-wrapper" id="lower-content">
                     <div class="thesis-sections" id="left-section">
                         <div class="thesis-cover-wrapper">
-                            <img src="../assets/placeholder.jpeg" alt="thesis-cover" id="thesis-cover">
+                            <img src="" alt="thesis-cover" id="thesis-cover">
                         </div>
                         <div id="upper-section">
                             <div></div>
@@ -164,7 +164,6 @@
     <script>
         const baseURL = "<?php echo $BASE_URL; ?>";
     </script>
-    <script src="https://unpkg.com/typo-js@1.2.1/typo.js"></script>
     <script type="module" src="<?php echo $BASE_URL; ?>view/js/view-thesis.js"></script>
     <script type="module" src="<?php echo $BASE_URL; ?>view/js/general/sidebar.js"></script>
     <script src="<?php echo $BASE_URL; ?>view/js/general/search-bar.js"></script>

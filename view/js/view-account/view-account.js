@@ -3,12 +3,12 @@ import { getUserInfo } from "../general/broadcast-user-info.js";
 document.addEventListener("DOMContentLoaded", async () => {
   // Check if signed in
   (async function checkUserCookie() {
-    const data = await getUserInfo();
-    if (data === null) {
+    const user = await getUserInfo();
+    if (user === null) {
       window.location.href = `${baseURL}`;
       return;
     }
-    if (!data.school_id) window.location.href = `${baseURL}`;
+    if (!user.school_id) window.location.href = `${baseURL}`;
   })();
 
   (function initBackBtn() {
@@ -26,10 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const user_school_id = user.school_id; // Viewer school id
   const role = user.role; // Viewer role
 
-  if (
-    (school_id != user_school_id && role !== "admin") ||
-    user_school_id === null
-  ) {
+  if (school_id != user_school_id && role !== "admin") {
     window.location.href = `${baseURL}`;
   }
 
@@ -113,7 +110,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       schoolId.value = account.school_id;
       schoolEmail.value = account.school_email;
       role.value = account.role.toUpperCase();
-      program.value = account.program_name;
+      program.value = account.program_name || account.department_name || "";
     }
   }
 
