@@ -8,7 +8,7 @@ require_once __DIR__ . '/config/baseUrl.php';
 |--------------------------------------------------------------------------
 */
 
-$basePath = '/thesis_repo';
+$basePath = '/NUL-THESIS-REPO';
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $method = $_SERVER['REQUEST_METHOD'];
