@@ -10,6 +10,7 @@ $searchTerm = isset($_GET['q']) ? htmlspecialchars($_GET['q']) : '';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LRC THESIS REPOSITORY</title>
 
+  <link rel="icon" type="image/x-icon" href="<?php echo $BASE_URL; ?>view/assets/favicons/favicon.ico">
   <link rel="stylesheet" href="<?php echo $BASE_URL; ?>view/css/root.css">
   <link rel="stylesheet" href="<?php echo $BASE_URL; ?>view/css/body-format.css" />
   <link rel="stylesheet" href="<?php echo $BASE_URL; ?>view/css/search-result.css" />

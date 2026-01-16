@@ -1,177 +1,243 @@
+:root {
+  --form-wrapper-color: #f4f5f9;
+  --form-section-color: #fafafc;
+  --form-input-box: #f4f4f9;
+  --form-border: #CCC;
+  --btn-wrapper-signin: #fed83a;
+  --btn-text-color: #183a85;
+}
 body {
   height: 100vh;
-  background: url("../assets/NU_Laguna_BG.png");
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-}
-body #back-btn-wrapper {
-  position: absolute;
-  top: 40px;
-  right: 50%;
-  height: 50px;
-  width: 150px;
-  transform: translateX(50%);
-}
-body #back-btn-wrapper #back-btn {
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
-  background-color: var(--color-accent);
-  color: var(--color-text-on-accent);
-  border: none;
-  border-radius: 4px;
-  transition: all 0.2s ease-out;
-  font-weight: 600;
-}
-body #back-btn-wrapper #back-btn:hover {
-  background-color: var(--color-accent-light);
-  transform: translateY(-2px);
-}
-body #back-btn-wrapper #back-btn:active {
-  transform: scale(0.95);
-}
-body #form-wrapper {
-  height: 50%;
-  aspect-ratio: 1/1;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(to bottom, rgba(26, 32, 104, 0.6), rgba(26, 32, 104, 0.4));
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-body #form-wrapper.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-body #form-wrapper {
-  display: grid;
-  grid-template-rows: 10% 1fr;
-  grid-template-columns: 1fr;
-  padding: 1em;
-  gap: 0.5em;
-}
-body #form-wrapper .form-section {
-  display: grid;
-}
-body #form-wrapper #header {
-  align-items: center;
-  justify-content: center;
-}
-body #form-wrapper #header #header-label {
-  font-size: 150%;
-  color: #fff;
-  font-weight: 600;
-}
-body #form-wrapper #body {
-  grid-template-rows: 30% 1fr;
-  grid-template-columns: 1fr;
-}
-body #form-wrapper #body #input-fields-section {
-  width: 100%;
-  position: relative;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  align-items: center;
-}
-body #form-wrapper #body #input-fields-section .text-field-wrapper {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 10% 90%;
-  align-items: center;
-  padding: 0 0.5em;
-}
-body #form-wrapper #body #input-fields-section .text-field-wrapper .labels {
-  height: 80%;
-}
-body #form-wrapper #body #input-fields-section .text-field-wrapper .labels .icon-wrapper {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(76, 92, 188, 0.8);
-}
-body #form-wrapper #body #input-fields-section .text-field-wrapper .labels .icon-wrapper .material-symbols-outlined {
-  font-size: 1.5em;
-  color: #fff;
-}
-body #form-wrapper #body #input-fields-section .text-field-wrapper .text-fields {
-  height: 80%;
-  width: 100%;
-  background-color: rgba(76, 92, 188, 0.4); /* softer translucency */
-  border: 1px solid transparent;
-  padding: 10px 12px;
-  font-size: 1.1em;
-  color: var(--color-text-on-primary);
-  outline: none;
-  transition: all 0.25s ease;
-  /* Placeholder styling */
-}
-body #form-wrapper #body #input-fields-section .text-field-wrapper .text-fields::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-body #form-wrapper #body #input-fields-section .text-field-wrapper .text-fields {
-  /* Hover effect: slight glow + accent border */
-}
-body #form-wrapper #body #input-fields-section .text-field-wrapper .text-fields:hover {
-  border-color: var(--color-accent);
-  box-shadow: 0 0 8px rgba(255, 211, 42, 0.4);
-  background-color: rgba(76, 92, 188, 0.35);
-}
-body #form-wrapper #body #input-fields-section .text-field-wrapper .text-fields {
-  /* Focus effect: subtle blue glow and brighter text */
-}
-body #form-wrapper #body #input-fields-section .text-field-wrapper .text-fields:focus {
-  border-color: var(--color-accent-light);
-  box-shadow: 0 0 12px rgba(255, 211, 42, 0.5);
-  background-color: rgba(76, 92, 188, 0.45);
-  color: #fff;
-}
-body #form-wrapper #body #buttons-section {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
-body #form-wrapper #body #buttons-section .btn-wrapper:nth-child(1) {
-  border-bottom: 2px solid var(--color-accent);
-}
-body #form-wrapper #body #buttons-section .btn-wrapper {
-  display: flex;
-  align-items: center;
-}
-body #form-wrapper #body #buttons-section .btn-wrapper .functional-btn {
-  width: 100%;
-  height: 50%;
-  border: none;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
-  background-color: var(--color-primary);
-  color: var(--color-text-on-primary);
-  letter-spacing: 0.5px;
-  transition: all 0.25s ease-in-out;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-body #form-wrapper #body #buttons-section .btn-wrapper .functional-btn:hover {
-  background-color: var(--color-primary-light);
-  box-shadow: 0 6px 14px rgba(255, 211, 42, 0.3);
-  transform: translateY(-2px);
-}
-body #form-wrapper #body #buttons-section .btn-wrapper .functional-btn:active {
-  background-color: var(--color-primary-dark);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  transform: translateY(1px);
-}
-body #form-wrapper #body #buttons-section .btn-wrapper #create-btn {
-  background-color: var(--color-accent);
-  color: var(--color-primary);
-}
-body #form-wrapper #body #buttons-section .btn-wrapper #create-btn:hover {
-  background-color: var(--color-accent-light);
-  box-shadow: 0 6px 14px rgba(26, 32, 104, 0.3);
 }
 
-/*# sourceMappingURL=sign-in.css.map */
+.container {
+  width: 70%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 1rem;
+  border: none;
+}
+
+.image-cover {
+  height: 100%;
+  width: 61%;
+  border-radius: 1rem 0 0 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-cover img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem 0 0 1rem;
+  transform: scale(1.2);
+}
+
+.image-cover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(144, 185, 247, 0.6), 
+                            rgba(29, 78, 216, 0.6));
+  border-radius: 1rem 0 0 1rem;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.form-wrapper {
+  height: 100%;
+  width: 40%;
+  background-color: var(--form-wrapper-color);
+  border-radius: 0 1rem 1rem 0;
+  padding: 2rem;
+}
+
+.login-title {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+.login-title img {
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.form-section {
+  height: 80%;
+  background-color: var(--form-section-color);
+  border-radius: 1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 2rem;
+}
+
+.login-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.text-field-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  height: 40px;
+  border: 1px solid var(--form-border);
+  border-radius: 0.25rem;
+  background-color: var(--form-input-box);
+}
+
+.text-field-wrapper input {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  padding-left: 0.25rem;
+}
+
+.text-field-wrapper img {
+  margin: 0 0.25rem;
+}
+
+.forgot-pass {
+  display: flex;
+  justify-content: end;
+  text-decoration: none;
+  width: 100%;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+#buttons-section a { text-decoration: none; }
+.sign-in-wrapper button {
+  background-color: var(--btn-wrapper-signin);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.btn-wrapper button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* CREATE ACCOUNT CSS */
+.create-account-form {
+  border-radius: 1rem 0 0 1rem;
+}
+.create-account-image {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.next-btn {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+#go-to-selection-btn {
+  width: 20%;
+  background: none;
+  border: none;
+  color: var(--btn-text-color);
+}
+#go-to-selection-btn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#buttons-section-acc {
+  display: flex;
+  justify-content: center;
+}
+#buttons-section-acc input {
+  border: none;
+  background: none;
+  margin-left: 0.25rem;
+  color: var(--btn-text-color);
+}
+#buttons-section-acc input:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.breadcrumbs, #buttons-section-acc, #buttons-section-acc input {
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+}
+
+#selection-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.selections, .text-fields {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--form-border);
+  border-radius: 0.25rem;
+  background-color: var(--form-input-box);
+}
+
+.selections {
+  margin-bottom: 1rem;
+}
+
+.back-btn {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+}
+
+.back-btn input {
+  width: 20%;
+  background: none;
+  border: none;
+  color: var(--btn-text-color);
+  margin-bottom: 0.5rem;
+}
+
+.back-btn input:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.create-btn {
+  display: flex;
+  border: none;
+  width: 100%;
+  background-color: var(--btn-wrapper-signin);
+  height: 40px;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dont-have-acc {
+  border: 1px solid red;
+}
