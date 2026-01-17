@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = baseURL + "sign-in";
   });
 
-  document.getElementById("back-btn").addEventListener("click", () => {
-    window.location.href = baseURL;
-  });
+  // document.getElementById("back-btn").addEventListener("click", () => {
+  //   window.location.href = baseURL;
+  // });
 
   const roleSelection = document.getElementById("role-selection");
   const subtypeSelection = document.getElementById("subtype-selection");

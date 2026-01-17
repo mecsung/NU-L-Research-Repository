@@ -100,7 +100,7 @@
                     
                 </div>
 
-                <div id="buttons-section buttons-section-acc">
+                <div id="buttons-section-acc">
                     <span>Have an account? </span>
                     <input type="button" value="Sign In" id="sign-in-btn" class="btns">
                 </div>

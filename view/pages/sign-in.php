@@ -55,7 +55,7 @@
                         <button type="submit" id="sign-in-btn" 
                         class="functional-btn">Login</button>
                     </div>
-                    <a href="" class="btn-wrapper dont-have-acc">Don't have an account?</a>
+                    <span class="btn-wrapper dont-have-acc">Don't have an account?</span>
                     <div class="btn-wrapper create-account-wrapper">
                         <button type="button" id="create-btn" 
                         class="functional-btn">Create an Account</button>
