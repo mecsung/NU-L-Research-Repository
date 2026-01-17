@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LRC THESIS REPOSITORY</title>
+  <title>NULTR | Home</title>
   
   <link rel="icon" type="image/x-icon" href="<?php echo $BASE_URL; ?>view/assets/favicons/favicon.ico">
   <link rel="stylesheet" href="view/css/root.css">
@@ -19,15 +19,14 @@
 
 <body>
   <div class="content-wrapper">
-    <div id="sidebar-spot">
-      <!-- SIDEBAR WILL RENDER HERE-->
-      <!--Because sidebar is absolute we need something that will adjust the main so it can be visible from 2vw-->
-    </div>
-    <!-- MAIN CONTENT -->
+    <!-- Sidebar -->
+    <div id="sidebar-spot"></div>
+
+    <!-- Main Content -->
     <div class="main">
-      <div class="main-sections" id="header">
-        <!--SEARCH BAR WILL RENDER HERE-->
-      </div>
+      <!-- Search Bar -->
+      <div class="main-sections" id="header"></div>
+
       <div class="main-sections" id="main-content">
         <div class="title-wrapper">
           <span class="title">FIND 100+ OF REFERENCE FOR YOUR THESIS</span>
@@ -35,9 +34,9 @@
         <div class="subtitle-wrapper">
           <span class="subtitle">ON-GOING / UPCOMING EVENTS</span>
         </div>
-        <!-- CAROUSEL FOR EVENTS -->
-        <div class="carousel-wrapper">
-          <!-- SETTINGS ICON FOR CAROUSEL -->
+
+        <!-- Carousel -->
+        <!-- <div class="carousel-wrapper">
           <div id="carousel-settings">
             <div id="icon-wrapper">
               <span class="material-symbols-outlined" id="settings-icon">
@@ -45,15 +44,11 @@
               </span>
             </div>
           </div>
+          <div class="carousel" id="event-carousel"></div>
+        </div> -->
 
-          <div class="carousel" id="event-carousel">
-            <!--Carousel Items will load here-->
-          </div>
-        </div>
-
-
-        <!-- POPUP FOR CAROUSEL SETTINGS -->
-        <div class="popup">
+        <!-- Popup Carousel Settings -->
+        <!-- <div class="popup">
           <div id="carousel-form">
             <div id="form-label">
               <span id="label">Carousel Image Settings</span>
@@ -61,14 +56,12 @@
                   close
                 </span></button>
             </div>
-            <div id="carousel-images">
-              <!--Carousel Images for editing will load here-->
-            </div>
+            <div id="carousel-images"></div>
           </div>
-        </div>
+        </div> -->
 
-        <!-- HELP BUTTONS -->
-        <div class="buttons-wrapper">
+        <!--Buttons -->
+        <!-- <div class="buttons-wrapper">
           <button class="help-btn" id="resourse-prob">
             REPORT AN E-RESOURCE PROBLEM
           </button>
@@ -76,7 +69,7 @@
             REQUEST FOR ASSISTANCE
           </button>
           <button class="help-btn" id="about">ABOUT THESIS REPOSITORY</button>
-        </div>
+        </div> -->
 
       </div>
     </div>

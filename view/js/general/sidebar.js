@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   titleWrapper.classList.add("title-wrapper");
   titleWrapper.innerHTML = `
   <div id="sidebar-label">
-    <img src="${baseURL}view/assets/Logo black.png" alt="Logo" class="logo"/>
+    <img src="${baseURL}view/assets/favicons/Icon.png" alt="Logo" class="logo"/>
     <div class="title-text">
       <span id="title">LRC THESIS</span>
       <span id="subtitle">REPOSITORY</span>
@@ -27,25 +27,25 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Category data
   const categories = [
     {
-      title: "PROGRAMS",
+      title: "Program",
       icon: "menu_book",
       items: [
-        "MM",
         "BSAIS",
         "BSA",
-        "BSBA-MA",
+        "BSBA",
         "BSTM",
         "BSIT",
         "BSCS",
         "BSIS",
         "BSCrim",
         "BSESS",
-        "BSPsy",
+        "BSP",
         "BMMA",
         "BACOMM",
         "BSArch",
         "BSCpE",
         "BSCE",
+        "MM",
         "MIT",
         "MAEd-Eng",
         "MAEd-Fil",
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       ],
     },
     {
-      title: "METHODOLOGY",
+      title: "Methodology",
       icon: "science",
       items: [
         "Quantitative",
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       ],
     },
     {
-      title: "THESIS_TYPE",
+      title: "Thesis type",
       icon: "type_specimen",
       items: [
         "Experimental Research",
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Checkbox container
     const carousel = document.createElement("div");
     carousel.classList.add("category-carousel");
-    const visibleCount = 8;
+    const visibleCount = 3;
 
     items.forEach((item, index) => {
       const label = document.createElement("label");
@@ -153,19 +153,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     sideBar.appendChild(adminPanel);
   }
 
-  // Social media section
-  const socials = document.createElement("div");
-  socials.classList.add("social-media");
-  socials.innerHTML = `
-    <span>FOLLOW US ON</span>
-    <div class="icons">
-      <div class="img-wrapper"><img src="${baseURL}view/assets/social-icons/yt.png" alt="youtube" /></div>
-      <div class="img-wrapper"><img src="${baseURL}view/assets/social-icons/fb.png" alt="facebook" /></div>
-      <div class="img-wrapper"><img src="${baseURL}view/assets/social-icons/insta.png" alt="instagram" /></div>
-      <div class="img-wrapper"><img src="${baseURL}view/assets/social-icons/linked.png" alt="linkedin" /></div>
-    </div>
-  `;
-  sideBar.appendChild(socials);
+  
+  // const socials = document.createElement("div");
+  // socials.classList.add("social-media");
+  // socials.innerHTML = `
+  //   <span>FOLLOW US ON</span>
+  //   <div class="icons">
+  //     <div class="img-wrapper"><img src="${baseURL}view/assets/social-icons/yt.png" alt="youtube" /></div>
+  //     <div class="img-wrapper"><img src="${baseURL}view/assets/social-icons/fb.png" alt="facebook" /></div>
+  //     <div class="img-wrapper"><img src="${baseURL}view/assets/social-icons/insta.png" alt="instagram" /></div>
+  //     <div class="img-wrapper"><img src="${baseURL}view/assets/social-icons/linked.png" alt="linkedin" /></div>
+  //   </div>
+  // `;
+  // sideBar.appendChild(socials);
 
   // Append sidebar to content wrapper
   contentWrapper.appendChild(sideBar);
