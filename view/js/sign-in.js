@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = baseURL + "create-account";
   });
 
-  // document.getElementById("back-btn").addEventListener("click", () => {
-  //   window.location.href = baseURL;
-  // });
+  document.getElementById("back-btn").addEventListener("click", () => {
+    window.location.href = baseURL;
+  });
 
   const form = document.getElementById("form-wrapper");
 

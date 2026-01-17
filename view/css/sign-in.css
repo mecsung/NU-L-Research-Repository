@@ -15,7 +15,7 @@ body {
 
 .container {
   width: 70%;
-  height: 75%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,7 +77,6 @@ body {
 }
 
 .form-section {
-  height: 80%;
   background-color: var(--form-section-color);
   border-radius: 1rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -247,4 +246,10 @@ body {
 .create-btn:hover {
   cursor: pointer;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.home-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
 }

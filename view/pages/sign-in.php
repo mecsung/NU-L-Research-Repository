@@ -14,9 +14,6 @@
 </head>
 
 <body>
-    <!-- <div id="back-btn-wrapper">
-        <button id="back-btn">GO TO HOMEPAGE</button>
-    </div> -->
     
     <div class="container">
     
@@ -24,6 +21,11 @@
             <img src="<?php echo $BASE_URL; ?>view/assets/NU-cover.jpg" alt="">
         </div>
         <form id="form-wrapper" class="form-wrapper">
+            <div id="back-btn-wrapper">
+                <button id="back-btn" class="home-btn">
+                    <img width="22" height="22" src="https://img.icons8.com/ios-filled/50/back.png" alt="back"/>
+                </button>
+            </div>
             <div class="login-title">
                 <img src="<?php echo $BASE_URL; ?>view/assets/favicons/Icon.png" alt="Icon">
                 <span class="title-text">NU-L Thesis Repository</span>
