@@ -1,10 +1,4 @@
-body .content-wrapper.no-scroll {
-  overflow: hidden;
-}
-body .content-wrapper .main {
-  height: 130vh;
-  grid-template-rows: 80px calc(130vh - 330px) 250px;
-}
+
 body .content-wrapper .main #main-content {
   display: grid;
   grid-template-rows: 10% 8% 67% 15%;

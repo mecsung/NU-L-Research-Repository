@@ -253,7 +253,8 @@
 }
 
 #side-bar .category-wrapper .category-carousel .hidden-checkbox {
-	display: none
+	display: none;
+	gap: 5px;
 }
 
 #side-bar .category-wrapper .category-carousel .show-more {

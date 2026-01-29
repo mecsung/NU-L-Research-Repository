@@ -29,10 +29,10 @@
 
       <div class="main-sections" id="main-content">
         <div class="title-wrapper">
-          <span class="title">FIND 100+ OF REFERENCE FOR YOUR THESIS</span>
+          <span class="title">Discover, Read, and Cite Academic Theses</span>
         </div>
         <div class="subtitle-wrapper">
-          <span class="subtitle">ON-GOING / UPCOMING EVENTS</span>
+          <span class="subtitle">Access university research accross programs, methodologies, and years.</span>
         </div>
 
         <!-- Carousel -->
@@ -74,6 +74,7 @@
       </div>
     </div>
   </div>
+  
   <script>
     const baseURL = "<?php echo $BASE_URL; ?>";
   </script>

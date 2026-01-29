@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       items: [
         "Quantitative",
         "Qualitative",
-        "Mixed-Methods",
-        "Case Study",
+        " Mixed-Methods",
+        " Case Study",
         "Experimental Design",
         "Survey Method",
         "Grounded Theory",
